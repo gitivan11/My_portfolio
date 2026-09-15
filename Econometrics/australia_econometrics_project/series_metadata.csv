@@ -1,0 +1,6 @@
+Variable,Display Name,Series ID Used,Backend,Start,End,Observations
+gdp_level,Real GDP,AUSGDPRQDSMEI,pandas_datareader,1996-03-31,2023-09-30,111
+cpi_index,Consumer Price Index,AUSCPIALLQINMEI,pandas_datareader,1996-03-31,2025-03-31,117
+interest_rate,3-month interest rate,IR3TIB01AUQ156N,pandas_datareader,1996-03-31,2026-03-31,121
+export_level,Real exports,NXRSAXDCAUQ,pandas_datareader,1996-03-31,2025-12-31,120
+tot_index,Terms of trade,XTEXVA01AUQ659S,pandas_datareader,1996-03-31,2025-12-31,120

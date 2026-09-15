@@ -1,0 +1,351 @@
+MODEL A SUMMARY
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             gdp_growth   R-squared:                       0.389
+Model:                            OLS   Adj. R-squared:                  0.365
+Method:                 Least Squares   F-statistic:                     15.94
+Date:                Wed, 22 Apr 2026   Prob (F-statistic):           3.99e-10
+Time:                        14:15:54   Log-Likelihood:                -180.42
+No. Observations:                 105   AIC:                             370.8
+Df Residuals:                     100   BIC:                             384.1
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+====================================================================================
+                       coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------
+Intercept            0.8910      0.376      2.369      0.020       0.145       1.637
+gdp_growth_l1        0.6108      0.085      7.202      0.000       0.443       0.779
+export_growth_l1    -0.0591      0.030     -1.945      0.055      -0.119       0.001
+interest_rate        0.1104      0.076      1.458      0.148      -0.040       0.261
+inflation            0.0141      0.088      0.161      0.872      -0.160       0.188
+==============================================================================
+Omnibus:                       44.345   Durbin-Watson:                   2.062
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1850.286
+Skew:                           0.095   Prob(JB):                         0.00
+Kurtosis:                      23.564   Cond. No.                         21.9
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+PREFERRED ADL(1) (LAGGED EXPORT GROWTH, LAGGED INTEREST, LAGGED INFLATION) SUMMARY
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             gdp_growth   R-squared:                       0.396
+Model:                            OLS   Adj. R-squared:                  0.372
+Method:                 Least Squares   F-statistic:                     16.39
+Date:                Wed, 22 Apr 2026   Prob (F-statistic):           2.34e-10
+Time:                        14:15:54   Log-Likelihood:                -179.84
+No. Observations:                 105   AIC:                             369.7
+Df Residuals:                     100   BIC:                             382.9
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+====================================================================================
+                       coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------
+Intercept            1.2665      0.380      3.333      0.001       0.513       2.020
+gdp_growth_l1        0.6231      0.084      7.456      0.000       0.457       0.789
+export_growth_l1    -0.0529      0.031     -1.728      0.087      -0.114       0.008
+interest_rate_l1     0.0974      0.074      1.310      0.193      -0.050       0.245
+inflation_l1        -0.1336      0.087     -1.527      0.130      -0.307       0.040
+==============================================================================
+Omnibus:                       44.761   Durbin-Watson:                   2.062
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1957.148
+Skew:                          -0.060   Prob(JB):                         0.00
+Kurtosis:                      24.150   Cond. No.                         22.3
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+PREFERRED ADL(1) WITH HAC(NEWEY-WEST) STANDARD ERRORS
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             gdp_growth   R-squared:                       0.396
+Model:                            OLS   Adj. R-squared:                  0.372
+Method:                 Least Squares   F-statistic:                     19.67
+Date:                Wed, 22 Apr 2026   Prob (F-statistic):           5.74e-12
+Time:                        14:15:54   Log-Likelihood:                -179.84
+No. Observations:                 105   AIC:                             369.7
+Df Residuals:                     100   BIC:                             382.9
+Df Model:                           4                                         
+Covariance Type:                  HAC                                         
+====================================================================================
+                       coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------
+Intercept            1.2665      0.657      1.928      0.057      -0.037       2.570
+gdp_growth_l1        0.6231      0.089      6.972      0.000       0.446       0.800
+export_growth_l1    -0.0529      0.021     -2.529      0.013      -0.094      -0.011
+interest_rate_l1     0.0974      0.071      1.368      0.174      -0.044       0.239
+inflation_l1        -0.1336      0.063     -2.110      0.037      -0.259      -0.008
+==============================================================================
+Omnibus:                       44.761   Durbin-Watson:                   2.062
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1957.148
+Skew:                          -0.060   Prob(JB):                         0.00
+Kurtosis:                      24.150   Cond. No.                         22.3
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 4 lags and without small sample correction
+
+ROBUSTNESS ADL(1) WITH PANDEMIC PULSE DUMMIES
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             gdp_growth   R-squared:                       0.626
+Model:                            OLS   Adj. R-squared:                  0.603
+Method:                 Least Squares   F-statistic:                     27.36
+Date:                Wed, 22 Apr 2026   Prob (F-statistic):           5.87e-19
+Time:                        14:15:54   Log-Likelihood:                -154.65
+No. Observations:                 105   AIC:                             323.3
+Df Residuals:                      98   BIC:                             341.9
+Df Model:                           6                                         
+Covariance Type:            nonrobust                                         
+======================================================================================
+                         coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+Intercept              1.9577      0.344      5.698      0.000       1.276       2.640
+gdp_growth_l1          0.5257      0.075      7.012      0.000       0.377       0.674
+export_growth_l1      -0.0671      0.025     -2.729      0.008      -0.116      -0.018
+interest_rate_l1       0.0464      0.060      0.779      0.438      -0.072       0.164
+inflation_l1          -0.1505      0.070     -2.139      0.035      -0.290      -0.011
+covid_pulse_2020q2    -8.5362      1.118     -7.635      0.000     -10.755      -6.318
+covid_pulse_2020q3    -2.7528      1.317     -2.089      0.039      -5.367      -0.138
+==============================================================================
+Omnibus:                      107.854   Durbin-Watson:                   2.309
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             2015.266
+Skew:                           3.248   Prob(JB):                         0.00
+Kurtosis:                      23.456   Cond. No.                         97.8
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+ADL(2) CANDIDATE (SECOND GDP LAG ADDED TO EXPORT ADL) SUMMARY
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             gdp_growth   R-squared:                       0.396
+Model:                            OLS   Adj. R-squared:                  0.366
+Method:                 Least Squares   F-statistic:                     12.98
+Date:                Wed, 22 Apr 2026   Prob (F-statistic):           1.02e-09
+Time:                        14:15:54   Log-Likelihood:                -179.84
+No. Observations:                 105   AIC:                             371.7
+Df Residuals:                      99   BIC:                             387.6
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+====================================================================================
+                       coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------
+Intercept            1.2603      0.391      3.222      0.002       0.484       2.036
+gdp_growth_l1        0.6194      0.098      6.325      0.000       0.425       0.814
+gdp_growth_l2        0.0074      0.100      0.074      0.941      -0.190       0.205
+export_growth_l1    -0.0533      0.031     -1.707      0.091      -0.115       0.009
+interest_rate_l1     0.0967      0.075      1.282      0.203      -0.053       0.246
+inflation_l1        -0.1338      0.088     -1.521      0.131      -0.308       0.041
+==============================================================================
+Omnibus:                       44.825   Durbin-Watson:                   2.051
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1974.163
+Skew:                          -0.053   Prob(JB):                         0.00
+Kurtosis:                      24.242   Cond. No.                         24.5
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+ADL(2) WITH HAC(NEWEY-WEST) STANDARD ERRORS
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             gdp_growth   R-squared:                       0.396
+Model:                            OLS   Adj. R-squared:                  0.366
+Method:                 Least Squares   F-statistic:                     46.97
+Date:                Wed, 22 Apr 2026   Prob (F-statistic):           1.20e-24
+Time:                        14:15:54   Log-Likelihood:                -179.84
+No. Observations:                 105   AIC:                             371.7
+Df Residuals:                      99   BIC:                             387.6
+Df Model:                           5                                         
+Covariance Type:                  HAC                                         
+====================================================================================
+                       coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------
+Intercept            1.2603      0.618      2.040      0.044       0.034       2.486
+gdp_growth_l1        0.6194      0.136      4.571      0.000       0.351       0.888
+gdp_growth_l2        0.0074      0.111      0.066      0.947      -0.213       0.228
+export_growth_l1    -0.0533      0.021     -2.577      0.011      -0.094      -0.012
+interest_rate_l1     0.0967      0.077      1.258      0.211      -0.056       0.249
+inflation_l1        -0.1338      0.063     -2.140      0.035      -0.258      -0.010
+==============================================================================
+Omnibus:                       44.825   Durbin-Watson:                   2.051
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1974.163
+Skew:                          -0.053   Prob(JB):                         0.00
+Kurtosis:                      24.242   Cond. No.                         24.5
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 4 lags and without small sample correction
+
+ROBUSTNESS ADL(2) WITH PANDEMIC PULSE DUMMIES
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             gdp_growth   R-squared:                       0.631
+Model:                            OLS   Adj. R-squared:                  0.605
+Method:                 Least Squares   F-statistic:                     23.73
+Date:                Wed, 22 Apr 2026   Prob (F-statistic):           1.69e-18
+Time:                        14:15:54   Log-Likelihood:                -153.92
+No. Observations:                 105   AIC:                             323.8
+Df Residuals:                      97   BIC:                             345.1
+Df Model:                           7                                         
+Covariance Type:            nonrobust                                         
+======================================================================================
+                         coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------
+Intercept              1.9456      0.343      5.670      0.000       1.265       2.627
+gdp_growth_l1          0.4609      0.093      4.938      0.000       0.276       0.646
+gdp_growth_l2          0.0976      0.084      1.161      0.249      -0.069       0.264
+export_growth_l1      -0.0738      0.025     -2.928      0.004      -0.124      -0.024
+interest_rate_l1       0.0364      0.060      0.606      0.546      -0.083       0.155
+inflation_l1          -0.1576      0.070     -2.236      0.028      -0.298      -0.018
+covid_pulse_2020q2    -8.6248      1.119     -7.710      0.000     -10.845      -6.405
+covid_pulse_2020q3    -3.3324      1.407     -2.369      0.020      -6.124      -0.540
+==============================================================================
+Omnibus:                      115.349   Durbin-Watson:                   2.121
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             2469.006
+Skew:                           3.548   Prob(JB):                         0.00
+Kurtosis:                      25.672   Cond. No.                         112.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+ROBUSTNESS ADL(1) – TERMS-OF-TRADE ALTERNATIVE
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             gdp_growth   R-squared:                       0.381
+Model:                            OLS   Adj. R-squared:                  0.357
+Method:                 Least Squares   F-statistic:                     15.41
+Date:                Wed, 22 Apr 2026   Prob (F-statistic):           7.48e-10
+Time:                        14:15:54   Log-Likelihood:                -181.10
+No. Observations:                 105   AIC:                             372.2
+Df Residuals:                     100   BIC:                             385.5
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+====================================================================================
+                       coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------
+Intercept            1.3225      0.383      3.451      0.001       0.562       2.083
+gdp_growth_l1        0.5829      0.081      7.176      0.000       0.422       0.744
+tot_growth_l1    -4.751e-05   6.42e-05     -0.740      0.461      -0.000    7.98e-05
+interest_rate_l1     0.0713      0.073      0.972      0.334      -0.074       0.217
+inflation_l1        -0.1424      0.088     -1.610      0.110      -0.318       0.033
+==============================================================================
+Omnibus:                       46.692   Durbin-Watson:                   1.949
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1995.866
+Skew:                           0.310   Prob(JB):                         0.00
+Kurtosis:                      24.350   Cond. No.                     6.09e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 6.09e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+ROBUSTNESS ADL(1) – TERMS-OF-TRADE WITH HAC(NEWEY-WEST) STANDARD ERRORS
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             gdp_growth   R-squared:                       0.381
+Model:                            OLS   Adj. R-squared:                  0.357
+Method:                 Least Squares   F-statistic:                     30.00
+Date:                Wed, 22 Apr 2026   Prob (F-statistic):           2.13e-16
+Time:                        14:15:54   Log-Likelihood:                -181.10
+No. Observations:                 105   AIC:                             372.2
+Df Residuals:                     100   BIC:                             385.5
+Df Model:                           4                                         
+Covariance Type:                  HAC                                         
+====================================================================================
+                       coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------
+Intercept            1.3225      0.683      1.937      0.056      -0.032       2.677
+gdp_growth_l1        0.5829      0.077      7.566      0.000       0.430       0.736
+tot_growth_l1    -4.751e-05   2.49e-05     -1.905      0.060    -9.7e-05    1.97e-06
+interest_rate_l1     0.0713      0.086      0.834      0.407      -0.098       0.241
+inflation_l1        -0.1424      0.065     -2.202      0.030      -0.271      -0.014
+==============================================================================
+Omnibus:                       46.692   Durbin-Watson:                   1.949
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1995.866
+Skew:                           0.310   Prob(JB):                         0.00
+Kurtosis:                      24.350   Cond. No.                     6.09e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 4 lags and without small sample correction
+[2] The condition number is large, 6.09e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+ROBUSTNESS ADL(1) – DELTA INTEREST RATE ALTERNATIVE
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             gdp_growth   R-squared:                       0.388
+Model:                            OLS   Adj. R-squared:                  0.364
+Method:                 Least Squares   F-statistic:                     15.87
+Date:                Wed, 22 Apr 2026   Prob (F-statistic):           4.36e-10
+Time:                        14:15:54   Log-Likelihood:                -180.51
+No. Observations:                 105   AIC:                             371.0
+Df Residuals:                     100   BIC:                             384.3
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+==========================================================================================
+                             coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------
+Intercept                  1.5751      0.362      4.354      0.000       0.857       2.293
+gdp_growth_l1              0.6299      0.085      7.389      0.000       0.461       0.799
+export_growth_l1          -0.0420      0.030     -1.398      0.165      -0.102       0.018
+delta_interest_rate_l1     0.2195      0.338      0.649      0.518      -0.451       0.890
+inflation_l1              -0.1299      0.090     -1.443      0.152      -0.309       0.049
+==============================================================================
+Omnibus:                       48.397   Durbin-Watson:                   2.067
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1837.309
+Skew:                          -0.489   Prob(JB):                         0.00
+Kurtosis:                      23.469   Cond. No.                         21.1
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+ROBUSTNESS ADL(1) – DELTA INTEREST RATE WITH HAC(NEWEY-WEST) STANDARD ERRORS
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             gdp_growth   R-squared:                       0.388
+Model:                            OLS   Adj. R-squared:                  0.364
+Method:                 Least Squares   F-statistic:                     19.52
+Date:                Wed, 22 Apr 2026   Prob (F-statistic):           6.77e-12
+Time:                        14:15:54   Log-Likelihood:                -180.51
+No. Observations:                 105   AIC:                             371.0
+Df Residuals:                     100   BIC:                             384.3
+Df Model:                           4                                         
+Covariance Type:                  HAC                                         
+==========================================================================================
+                             coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------
+Intercept                  1.5751      0.600      2.626      0.010       0.385       2.765
+gdp_growth_l1              0.6299      0.120      5.229      0.000       0.391       0.869
+export_growth_l1          -0.0420      0.023     -1.794      0.076      -0.088       0.004
+delta_interest_rate_l1     0.2195      0.207      1.060      0.292      -0.191       0.630
+inflation_l1              -0.1299      0.069     -1.895      0.061      -0.266       0.006
+==============================================================================
+Omnibus:                       48.397   Durbin-Watson:                   2.067
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1837.309
+Skew:                          -0.489   Prob(JB):                         0.00
+Kurtosis:                      23.469   Cond. No.                         21.1
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 4 lags and without small sample correction

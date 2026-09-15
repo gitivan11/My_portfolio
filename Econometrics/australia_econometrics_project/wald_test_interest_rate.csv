@@ -1,0 +1,2 @@
+,restriction,wald_statistic,p_value,conclusion
+0,interest_rate_l1 = 0,1.7151032640734827,0.19332542578054343,Fail to reject the null: interest-rate terms are not jointly relevant.

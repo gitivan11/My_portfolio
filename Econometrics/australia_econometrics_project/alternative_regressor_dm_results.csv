@@ -1,0 +1,3 @@
+,Model 1,Model 2,Loss,Observations,Mean loss differential (L1-L2),DM statistic,p-value,Winner at 5%
+0,ADL(1) preferred,ADL(1)-ToT,SE,40,0.24085072146242625,0.588631121661872,0.559502721833852,No significant difference
+1,ADL(1) preferred,ADL(1)-DeltaRate,SE,40,0.1496387245431497,0.4098805872955995,0.6841363709846648,No significant difference
